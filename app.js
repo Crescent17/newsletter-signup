@@ -9,7 +9,7 @@ const listId = process.env.LIST_ID
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static("public"))
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`The server is running on port ${port}`)
 })
 
